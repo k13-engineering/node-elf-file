@@ -1,0 +1,28 @@
+{
+  "name": "node-elf-file",
+  "version": "0.0.1",
+  "description": "ELF file parser and formatter for node.js",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "./node_modules/.bin/mjs-mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k13-engineering/node-elf-file.git"
+  },
+  "keywords": [
+    "elf",
+    "executable",
+    "parser"
+  ],
+  "author": "Simon Kadisch",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/k13-engineering/node-elf-file/issues"
+  },
+  "homepage": "https://github.com/k13-engineering/node-elf-file#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mjs-mocha": "git://github.com/k13-engineering/mjs-mocha#master"
+  }
+}
