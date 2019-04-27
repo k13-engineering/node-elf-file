@@ -1,10 +1,10 @@
 {
   "name": "node-elf-file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ELF file parser and formatter for node.js",
   "main": "index.mjs",
   "scripts": {
-    "test": "./node_modules/.bin/mjs-mocha"
+    "test": "./node_modules/.bin/mocha -r esm tests/**"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/k13-engineering/node-elf-file#readme",
   "dependencies": {},
   "devDependencies": {
-    "mjs-mocha": "git://github.com/k13-engineering/mjs-mocha#master"
+    "esm": "^3.2.22",
+    "mocha": "^6.1.4"
   }
 }

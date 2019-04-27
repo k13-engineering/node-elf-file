@@ -1,8 +1,8 @@
-const path = require("path");
-const fs = require("fs");
+import path from "path";
+import fs from "fs";
 
 const readFileData = (name) => {
-  const data = fs.readFileSync(path.resolve(__dirname, "assets", name));
+  const data = fs.readFileSync(path.resolve("tests/assets", name));
   return { name, data };
 };
 
@@ -65,7 +65,7 @@ const all = [
 
 const load = (name) => readFileData(name);
 
-module.exports = {
+const assets = {
   elf32,
   elf64,
   littleEndian,
@@ -73,3 +73,5 @@ module.exports = {
   all,
   load
 };
+
+export default assets;
