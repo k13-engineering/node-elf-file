@@ -1,6 +1,6 @@
 import assert from "assert";
 import fs from "fs";
-import elf from "../lib/elf.js";
+import elf from "../index.js";
 import assets from "./assets.js";
 
 describe("parsing", function () {
