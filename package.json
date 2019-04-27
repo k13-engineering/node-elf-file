@@ -4,7 +4,8 @@
   "description": "ELF file parser and formatter for node.js",
   "main": "index.mjs",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text --all mocha -r esm tests/**"
+    "test": "nyc --reporter=lcov --reporter=text --all mocha -r esm tests/**",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "esm": "^3.2.22",
     "mocha": "^6.1.4",
-    "nyc": "^14.0.0"
+    "nyc": "^14.0.0",
+    "codecov": "^3.3.0"
   }
 }
