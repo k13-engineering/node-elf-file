@@ -4,7 +4,7 @@
   "description": "ELF file parser and formatter for node.js",
   "main": "index.mjs",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -r esm tests/**"
+    "test": "nyc mocha -r esm tests/**"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "dependencies": {},
   "devDependencies": {
     "esm": "^3.2.22",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0"
   }
 }
