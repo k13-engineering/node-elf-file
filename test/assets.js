@@ -4,7 +4,7 @@ import path from "path";
 import fs from "fs";
 
 const readFileData = (name) => {
-  const data = fs.readFileSync(path.resolve("tests/assets", name));
+  const data = fs.readFileSync(path.resolve("test/assets", name));
   return { name, data };
 };
 
