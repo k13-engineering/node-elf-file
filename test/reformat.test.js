@@ -10,6 +10,12 @@ describe("reformat", function () {
         const buf = elf.format(e);
         assert(Buffer.compare(buf, data) === 0, "reformatted output should be equal");
       });
+
+      it("should be able to reparse the formatted output", () => {
+        const parsed = elf.parse(data);
+        const e = elf.parse(elf.format(parsed));
+        assert.deepEqual(e, parsed);
+      });
     });
   });
 });
