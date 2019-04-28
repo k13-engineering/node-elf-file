@@ -13,7 +13,9 @@
   },
   
   "globals": {
-    "BigInt": true
+    "BigInt": true,
+    "describe": true,
+    "it": true
   },
 
   "rules": {

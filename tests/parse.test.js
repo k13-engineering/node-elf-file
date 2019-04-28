@@ -1,5 +1,3 @@
-import assert from "assert";
-import fs from "fs";
 import elf from "../index.js";
 import assets from "./assets.js";
 
