@@ -4,7 +4,8 @@ const elf = require("./lib/elf.js").default;
 
 const elfFile = {
   "parse": elf.parse,
-  "format": elf.format
+  "format": elf.format,
+  "validate": elf.validate
 };
 
 module.exports = elfFile;
