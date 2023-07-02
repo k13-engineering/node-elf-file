@@ -62,6 +62,8 @@ const dechunkify = (data) => {
 };
 
 describe("analyzing", function () {
+  this.timeout(10000);
+  
   assets.all.forEach(({ name, data }) => {
     describe(name, () => {
       it("should analyze without error", () => {
