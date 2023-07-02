@@ -8,8 +8,8 @@ describe("strtab", () => {
       "world"
     ];
 
-    const { header, junk } = strtab.format(input);
-    const output = strtab.parse({ header, junk });
+    const { header, chunk } = strtab.format(input);
+    const output = strtab.parse({ header, chunk });
 
     assert.deepEqual(output, input);
   });

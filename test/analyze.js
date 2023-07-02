@@ -42,15 +42,15 @@ const copyExcluding = (data, excludes) => {
   return result;
 };
 
-const dejunkify = (data) => {
+const dechunkify = (data) => {
   const file = data.file;
 
-  const segments = data.segments.map((segment) => copyExcluding(segment, [ "junk_idx", "junk_offset" ]));
+  const segments = data.segments.map((segment) => copyExcluding(segment, [ "chunk_idx", "chunk_offset" ]));
 
   let sections = {};
   Object.keys(data.sections).forEach((name) => {
     sections = Object.assign(sections, {
-      [name]: copyExcluding(data.sections[name], [ "junk_idx", "junk_offset" ])
+      [name]: copyExcluding(data.sections[name], [ "chunk_idx", "chunk_offset" ])
     });
   });
 
@@ -76,7 +76,7 @@ describe("analyzing", function () {
         const analyzed = elf.analyze(elf.parse(data));
         const reanalyzed = elf.analyze(elf.generate(analyzed));
 
-        assert.deepEqual(dejunkify(reanalyzed), dejunkify(analyzed));
+        assert.deepEqual(dechunkify(reanalyzed), dechunkify(analyzed));
       });
 
       describe("fields", () => {
