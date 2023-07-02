@@ -1,11 +1,12 @@
 {
   "name": "node-elf-file",
+  "type": "module",
   "version": "0.0.2",
   "description": "ELF file parser and formatter for node.js",
-  "main": "index.mjs",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text --all mocha -r esm --bail",
-    "codecov": "codecov"
+    "test": "mocha --bail",
+    "coverage": "c8 --all npm test"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,8 @@
     "url": "https://github.com/k13-engineering/node-elf-file/issues"
   },
   "homepage": "https://github.com/k13-engineering/node-elf-file#readme",
-  "dependencies": {},
   "devDependencies": {
-    "esm": "^3.2.22",
-    "mocha": "^6.1.4",
-    "nyc": "^14.0.0",
-    "codecov": "^3.3.0"
+    "mocha": "^10.2.0",
+    "c8": "^8.0.0"
   }
 }

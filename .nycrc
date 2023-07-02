@@ -1,6 +1,0 @@
-{
-  "include": [
-    "lib/**/*.js",
-    "index.js"
-  ]
-}

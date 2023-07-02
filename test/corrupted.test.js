@@ -1,6 +1,6 @@
 import assets from "./assets.js";
 import assert from "assert";
-import elf from "../index.js";
+import elf from "../lib/index.js";
 
 describe("corruptions", () => {
   it("should give the correct error message when ELF magic is wrong", () => {

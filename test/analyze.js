@@ -1,5 +1,5 @@
 import assert from "assert";
-import elf from "../index.js";
+import elf from "../lib/index.js";
 import assets from "./assets.js";
 
 const checkHeader = (file) => {
