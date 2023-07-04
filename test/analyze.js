@@ -81,6 +81,19 @@ describe("analyzing", function () {
         assert.deepEqual(dechunkify(reanalyzed), dechunkify(analyzed));
       });
 
+      it("should reanalyze after format-parse correctly", () => {
+        const parsed = elf.parse(data);
+        const analyzed = elf.analyze(parsed);
+
+        const regenerated = elf.generate(analyzed);
+        const reformatted = elf.format(regenerated);
+
+        const reparsed = elf.parse(reformatted);
+        const reanalyzed = elf.analyze(reparsed);
+
+        assert.deepEqual(dechunkify(reanalyzed), dechunkify(analyzed));
+      });
+
       describe("fields", () => {
         describe("simple analyze", () => {
           it("should have proper file fields", () => {
