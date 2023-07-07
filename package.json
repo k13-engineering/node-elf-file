@@ -1,7 +1,7 @@
 {
   "name": "node-elf-file",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ELF file parser and formatter for node.js",
   "main": "lib/index.js",
   "scripts": {
