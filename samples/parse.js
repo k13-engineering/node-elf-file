@@ -1,4 +1,4 @@
-import elf from "../index.js";
+import elf from "../lib/index.js";
 import fs from "fs";
 
 process.nextTick(async () => {
